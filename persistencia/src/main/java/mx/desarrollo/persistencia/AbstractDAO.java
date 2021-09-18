@@ -21,13 +21,7 @@ import org.hibernate.SQLQuery;
 import org.hibernate.metadata.ClassMetadata;
 import org.hibernate.transform.Transformers;
 
-/**
- * Generic abstract class avoid to extends another DAO for make generic methods
- * with the other DAO
- *
- * @param <PK>
- * @param <T>
- */
+
 public abstract class AbstractDAO<PK extends Serializable, T> implements InterfaceDAO<T> {
 
     //private Session session;
