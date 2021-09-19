@@ -20,7 +20,6 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author lalo_
  */
 @Entity
 @Table(name = "unidadap")
