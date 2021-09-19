@@ -12,7 +12,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-import mx.desarrollo.entidad.Usuario;
+import mx.desarrollo.entidad.Profesor;
 import mx.desarrollo.helper.LoginHelper;
 
 /**
@@ -23,7 +23,7 @@ import mx.desarrollo.helper.LoginHelper;
 @SessionScoped
 public class LoginBeanUI implements Serializable{
     private LoginHelper loginHelper;
-    private Usuario usuario;
+    private Profesor usuario;
     
     public LoginBeanUI() {
         loginHelper = new LoginHelper();

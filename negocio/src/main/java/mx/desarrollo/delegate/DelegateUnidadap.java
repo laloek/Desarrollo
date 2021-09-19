@@ -13,7 +13,7 @@ import mx.desarrollo.integracion.ServiceLocator;
 public class DelegateUnidadap {
     
     public void saveUnidadap(Unidadap unidadap){
-        ServiceLocator.getInstanceUsuarioDAO().save(unidadap);
+        ServiceLocator.getInstanceUnidadapDAO().save(unidadap);
     }
     
 }
