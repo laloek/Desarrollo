@@ -32,7 +32,7 @@ public class LoginBeanUI implements Serializable{
     /**
      * Metodo postconstructor todo lo que este dentro de este metodo
      * sera la primero que haga cuando cargue la pagina
-     */
+    
     @PostConstruct
     public void init(){
         profesor= new Profesor();
@@ -55,7 +55,7 @@ public class LoginBeanUI implements Serializable{
     }
 
     
-    /* getters y setters*/
+    /* getters y setters
 
     public Profesor getProfesor() {
         return profesor;
@@ -66,7 +66,7 @@ public class LoginBeanUI implements Serializable{
     }
     
     
-    
+     */
     
     
     

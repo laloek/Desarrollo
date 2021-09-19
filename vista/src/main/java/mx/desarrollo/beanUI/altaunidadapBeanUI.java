@@ -38,10 +38,9 @@ public class altaunidadapBeanUI implements Serializable{
         unidadap= new Unidadap();
     }
 
-    public String NuevaUnidadap(Unidadap unidad)
+    public void NuevaUnidadap(Unidadap unidadap)
     {
-        
-        return "";
+       unidadapHelper.nueva(unidadap);
     }
  
     

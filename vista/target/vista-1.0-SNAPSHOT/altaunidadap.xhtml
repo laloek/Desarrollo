@@ -9,71 +9,35 @@
     <h:head>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="style.css" rel="stylesheet" type="text/css"/>
-        <style>
-            
-            *{
-                text-align: center;
-            }
-            .center{
-                float: none;
-                margin: 0 auto;
-                
-            }
-            
-           
-            div.login{
-                position: absolute;
-                top:0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 35%;
-                width: 25%;
-                padding: 25px;
-                margin: auto;
-                background: white;
-                border-radius: 5px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-            .logo{
-                width: 150px;
-            }
-            .form-control:focus{
-                border-color:#007738;
-            }
-            .btn-success{
-                text-shadow: none;
-            }
-        </style>
     </h:head>
 
     <h:body>
-        <div class = "row">
-           
-            <h:form>
-               
-                <p:messages id="messages" showDetail="true" closable="true">
-                     
-                </p:messages>
-                <div class="login">
-                    <div class="panel-header">
-                        <p:graphicImage url="resources/uabcl.png" class="logo" />
-                    </div>
-                    <div class="panel-body">
-                        <div class=" form-group">
-                            <p:inputText class ="form-control" placeholder ="Nombre:" autocomplete="false" value ="#{AltaUI.Profesor.correo}" />
-                        </div>
-                        <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de clase: " value="#{AltaUI.usuario.contrasena}" />
-                        </div>
-                        <p:commandButton update="messages" class = "btn btn-success" value ="Iniciar sesion" actionListener ="#{loginUI.login()}" />
-
-                    </div>
-                </div>
-                
-            </h:form>
-            
+<div class="ui-fluid">
+    <div class="p-field p-grid">
+        <label for="firstname" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Nombre unidad aprendisaje</label>
+        <div class="p-col-12 p-md-10">
+            <p:inputText id="firstname" type="text" value="#{altaUnidadapUI.unidadap.nombreUnidadAprendizaje}" />
         </div>
-            
+    </div>
+    <div class="p-field p-grid">
+        <label for="firstname" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Horas clase</label>
+        <div class="p-col-12 p-md-10">
+            <p:inputText id="firstname" type="text" value="#{altaUnidadapUI.unidadap.horasClase}" />
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="firstname" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Horas taller</label>
+        <div class="p-col-12 p-md-10">
+            <p:inputText id="firstname" type="text" value="#{altaUnidadapUI.unidadap.horasTaller}" />
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="firstname" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Horas laboratorio</label>
+        <div class="p-col-12 p-md-10">
+            <p:inputText id="firstname" type="text" value="#{altaUnidadapUI.unidadap.horasLaboratorio}" />
+        </div>
+    </div>
+    <p:commandButton update="messages" class = "btn btn-success" value ="Iniciar sesion" actionListener ="#{altaUnidadapUI.NuevaUnidadap(unidadap)}" />
+</div> 
     </h:body>
 </html>
