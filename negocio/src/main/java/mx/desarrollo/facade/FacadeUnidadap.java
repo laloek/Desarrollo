@@ -11,13 +11,13 @@ import mx.desarrollo.entidad.Unidadap;
  * @author lalo_
  */
 public class FacadeUnidadap {
-    private final DelegateUnidadap delegateProfesor;
+    private final DelegateUnidadap delegateUnidadap;
 
     public FacadeUnidadap() {
-        this.delegateProfesor = new DelegateUnidadap();
+        this.delegateUnidadap = new DelegateUnidadap();
     }
     
-    public void guardarAlumno(Unidadap unidadap){
-        delegateProfesor.saveUnidadap(unidadap);
+    public void guardarUnidadap(Unidadap unidadap){
+        delegateUnidadap.saveUnidadap(unidadap);
     }
 }
