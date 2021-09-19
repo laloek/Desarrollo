@@ -5,7 +5,7 @@
  */
 package test;
 
-import mx.desarrollo.entidad.Usuario;
+import mx.desarrollo.entidad.Profesor;
 import mx.desarrollo.integracion.ServiceFacadeLocator;
 
 /**
@@ -14,14 +14,6 @@ import mx.desarrollo.integracion.ServiceFacadeLocator;
  */
 public class test {
     public static void main(String[] args) {
-        Usuario usuario = new Usuario();
         
-        usuario = ServiceFacadeLocator.getInstanceFacadeUsuario().login("contra123","francisco.reyes.parra@uabc.edu.mx");
-        
-        if(usuario.getIdusuario() != null){
-            System.out.println("Login exitoso con el correo: " + usuario.getCorreo());
-        }else{
-            System.out.println("No se encontro registro");
-        }
     }
 }

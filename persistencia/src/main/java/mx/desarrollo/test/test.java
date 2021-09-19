@@ -7,8 +7,8 @@ package mx.desarrollo.test;
 
 import java.util.ArrayList;
 import java.util.List;
-import mx.desarrollo.DAO.UsuarioDAO;
-import mx.desarrollo.entidad.Usuario;
+import mx.desarrollo.DAO.ProfesorDAO;
+import mx.desarrollo.entidad.Profesor;
 
 /**
  *
@@ -16,12 +16,12 @@ import mx.desarrollo.entidad.Usuario;
  */
 public class test {
     public static void main(String[] args) {
-        List<Usuario> listaUsuarios = new ArrayList();
-        UsuarioDAO usuarioDao = new UsuarioDAO();
+        List<Profesor> listaUsuarios = new ArrayList();
+        ProfesorDAO usuarioDao = new ProfesorDAO();
         listaUsuarios = usuarioDao.findAll();
         
-        for(Usuario us : listaUsuarios){
-            System.out.println("Correo: " + us.getCorreo());
+        for(Profesor us : listaUsuarios){
+            System.out.println("Nombre: " + us.getNombre());
         }
     }
 }

@@ -5,8 +5,8 @@
  */
 package mx.desarrollo.integracion;
 
-import mx.desarrollo.facade.FacadeAlumno;
-import mx.desarrollo.facade.FacadeUsuario;
+import mx.desarrollo.facade.FacadeProfesor;
+import mx.desarrollo.facade.FacadeUnidadap;
 
 /**
  *
@@ -14,24 +14,24 @@ import mx.desarrollo.facade.FacadeUsuario;
  */
 public class ServiceFacadeLocator {
     
-    private static FacadeAlumno facadeAlumno;
-    private static FacadeUsuario facadeUsuario;
+    private static FacadeProfesor facadeProfesor;
+    private static FacadeUnidadap facadeUnidadap;
     
-    public static FacadeAlumno getInstanceFacadeAlumno() {
-        if (facadeAlumno == null) {
-            facadeAlumno = new FacadeAlumno();
-            return facadeAlumno;
+    public static FacadeProfesor getInstanceFacadeAlumno() {
+        if (facadeProfesor == null) {
+            facadeProfesor = new FacadeProfesor();
+            return facadeProfesor;
         } else {
-            return facadeAlumno;
+            return facadeProfesor;
         }
     }
     
-    public static FacadeUsuario getInstanceFacadeUsuario() {
-        if (facadeUsuario == null) {
-            facadeUsuario = new FacadeUsuario();
-            return facadeUsuario;
+    public static FacadeUnidadap getInstanceFacadeUsuario() {
+        if (facadeUnidadap == null) {
+            facadeUnidadap = new FacadeUnidadap();
+            return facadeUnidadap;
         } else {
-            return facadeUsuario;
+            return facadeUnidadap;
         }
     }
 }
