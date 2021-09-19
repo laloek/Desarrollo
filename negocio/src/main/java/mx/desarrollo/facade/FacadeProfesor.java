@@ -17,7 +17,7 @@ public class FacadeProfesor {
         this.delegateProfesor = new DelegateProfesor();
     }
     
-    public void guardarAlumno(Profesor profesor){
+    public void guardarProfesor(Profesor profesor){
         delegateProfesor.saveProfesor(profesor);
     }
 }

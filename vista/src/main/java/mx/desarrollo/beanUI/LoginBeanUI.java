@@ -23,7 +23,7 @@ import mx.desarrollo.helper.LoginHelper;
 @SessionScoped
 public class LoginBeanUI implements Serializable{
     private LoginHelper loginHelper;
-    private Profesor usuario;
+    private Profesor profesor;
     
     public LoginBeanUI() {
         loginHelper = new LoginHelper();
@@ -35,19 +35,19 @@ public class LoginBeanUI implements Serializable{
      */
     @PostConstruct
     public void init(){
-        usuario= new Usuario();
+        profesor= new Profesor();
     }
 
      public void login() throws IOException{
         String appURL = "/index.xhtml";
         // los atributos de usuario vienen del xhtml 
-        Usuario us= new Usuario();
+        Profesor us= new Profesor();
         us.setIdusuario(0);
         us = loginHelper.Login(usuario.getCorreo(), usuario.getContrasena());
           if(us != null && us.getIdusuario()!=null){
             // asigno el usuario encontrado al usuario de esta clase para que 
             // se muestre correctamente en la pagina de informacion
-            usuario=us;
+            profesor=us;
             FacesContext.getCurrentInstance().getExternalContext().redirect(FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath() + appURL);
         }else{
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Usuario o contraseña incorrecta:", "Intente de nuevo"));          
@@ -57,12 +57,12 @@ public class LoginBeanUI implements Serializable{
     
     /* getters y setters*/
 
-    public Usuario getUsuario() {
-        return usuario;
+    public Profesor getProfesor() {
+        return profesor;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
     }
     
     
