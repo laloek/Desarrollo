@@ -17,8 +17,15 @@ import mx.desarrollo.integracion.ServiceFacadeLocator;
  */
 public class UnidadapHelper implements Serializable{
     
-    public void nueva(Unidadap unidadap){
-        ServiceFacadeLocator.getInstanceFacadeUnidadap().guardarUnidadap(unidadap);
+
+    /**
+     * Metodo para hacer login llamara a la instancia de usuarioFacade
+     * @param correo
+     * @param password
+     * @return 
+     */
+    public Unidadap Login(String correo, String password){
+        return ServiceFacadeLocator.getInstanceFacadeUsuario().login(password, correo);
     }
     
     
