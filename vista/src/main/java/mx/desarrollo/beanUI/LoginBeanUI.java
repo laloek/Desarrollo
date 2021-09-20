@@ -53,9 +53,7 @@ public class LoginBeanUI implements Serializable{
         }else{
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Usuario o contraseña incorrecta:", "Intente de nuevo"));          
         }
-    }
-*/
-    
+    }   */
     /* getters y setters*/
 
     public Profesor getProfesor() {

@@ -1,6 +1,6 @@
-mx\desarrollo\helper\LoginHelper.class
 mx\desarrollo\beanUI\altaprofesorBeanUI.class
 mx\desarrollo\beanUI\LoginBeanUI.class
 mx\desarrollo\helper\profesorHelper.class
 mx\desarrollo\helper\UnidadapHelper.class
+mx\desarrollo\helper\LoginHelper.class
 mx\desarrollo\beanUI\altaunidadapBeanUI.class

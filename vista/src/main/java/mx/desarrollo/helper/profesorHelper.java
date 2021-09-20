@@ -7,6 +7,7 @@ package mx.desarrollo.helper;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.List;
 import javax.faces.context.FacesContext;
 import mx.desarrollo.entidad.Profesor;
 import mx.desarrollo.integracion.ServiceFacadeLocator;
@@ -20,6 +21,11 @@ public class profesorHelper implements Serializable{
  
     public void altaProfesor(Profesor profe){
         ServiceFacadeLocator.getInstanceFacadeProfesor().guardarProfesor(profe);
+    }
+    
+    public List<Profesor> todosprofesores()
+    {
+        return ServiceFacadeLocator.getInstanceFacadeProfesor().todosprofesores();
     }
     
 }

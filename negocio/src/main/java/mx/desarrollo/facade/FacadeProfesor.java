@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mx.desarrollo.facade;
+import java.util.List;
 import mx.desarrollo.delegate.DelegateProfesor;
 import mx.desarrollo.entidad.Profesor;
 /**
@@ -20,4 +21,11 @@ public class FacadeProfesor {
     public void guardarProfesor(Profesor profesor){
         delegateProfesor.saveProfesor(profesor);
     }
+    
+    public List<Profesor> todosprofesores()
+    {
+        return delegateProfesor.allProfesor();
+    }
+    
+    
 }
