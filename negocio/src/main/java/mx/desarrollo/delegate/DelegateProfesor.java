@@ -14,4 +14,14 @@ public class DelegateProfesor {
     {
         return ServiceLocator.getInstanceProfesorDAO().findAll();
     }
+    
+    public void deleteProfesor(Profesor profesor)
+    {
+        ServiceLocator.getInstanceProfesorDAO().delete(profesor);
+    }
+    
+    public Profesor searchProfesor(int id)
+    {
+       return ServiceLocator.getInstanceProfesorDAO().find(id);
+    }
 }

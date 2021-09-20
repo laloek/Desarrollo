@@ -22,9 +22,20 @@ public class FacadeProfesor {
         delegateProfesor.saveProfesor(profesor);
     }
     
+    public void eliminarProfesor(Profesor profesor)
+    {
+        delegateProfesor.deleteProfesor(profesor);
+    }
+    
     public List<Profesor> todosprofesores()
     {
         return delegateProfesor.allProfesor();
+    }
+    
+    public Profesor busquedaProfesor(int id)
+    {
+        
+        return delegateProfesor.searchProfesor(id);
     }
     
     

@@ -28,4 +28,17 @@ public class profesorHelper implements Serializable{
         return ServiceFacadeLocator.getInstanceFacadeProfesor().todosprofesores();
     }
     
+    public void bajaProfesor(Profesor profe)
+    {
+       
+        ServiceFacadeLocator.getInstanceFacadeProfesor().guardarProfesor(profe);
+    }
+    
+    public Profesor buscarProfesor(int id)
+    {
+        Profesor profe = new Profesor();
+        profe = ServiceFacadeLocator.getInstanceFacadeProfesor().busquedaProfesor(id);
+        return profe;
+    }
+    
 }
