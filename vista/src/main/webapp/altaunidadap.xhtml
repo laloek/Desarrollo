@@ -57,19 +57,19 @@
                 </p:messages>
                 <div class="login">
                     <div class="panel-body">
-                        <div class=" form-group">
-                            <p:inputText class ="form-control" placeholder ="Nombre:" autocomplete="false" value ="#{AltaUnidadapUI.Unidadap.nombre}" />
+                        
+                            <p:inputText class ="form-control" placeholder ="Nombre:" autocomplete="false" value ="#{altaunidadapUI.unidadap.nombreUnidadAprendizaje}" />
+                        
+                        <div class="form-group">
+                            <p:inputText class ="form-control" placeholder="Horas de clase: " value="#{altaunidadapUI.unidadap.horasClase}" />
                         </div>
                         <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de clase: " value="#{AltaUnidadapUI.Unidadap.Hclase}" />
+                            <p:inputText class ="form-control" placeholder="Horas de taller: " value="#{altaunidadapUI.unidadap.horasTaller}" />
                         </div>
                         <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de taller: " value="#{AltaUnidadapUI.Unidadap.Htaller}" />
+                            <p:inputText class ="form-control" placeholder="Horas de clase: " value="#{altaunidadapUI.unidadap.horasLaboratorio}" />
                         </div>
-                        <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de clase: " value="#{AltaUnidadapUI.Unidadap.Hlaboratorio}" />
-                        </div>
-                        <p:commandButton class = "btn btn-success" value ="Iniciar sesion" actionListener ="#{altaUnidadapUI.NuevaUnidadap()}" />
+                        <p:commandButton class = "btn btn-success" value ="Iniciar sesion" actionListener ="#{altaunidadapUI.NuevaUnidadap()}" />
 
                     </div>
                 </div>

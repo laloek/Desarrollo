@@ -19,7 +19,7 @@ import mx.desarrollo.helper.UnidadapHelper;
  *
  * @author Kevin
  */
-@ManagedBean(name = "altaUnidadapUI")
+@ManagedBean(name = "altaunidadapUI")
 @SessionScoped
 public class altaunidadapBeanUI implements Serializable{
     private Unidadap unidadap;
