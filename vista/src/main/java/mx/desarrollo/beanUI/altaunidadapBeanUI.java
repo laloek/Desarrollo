@@ -40,18 +40,7 @@ public class altaunidadapBeanUI implements Serializable{
 
     public void nuevaUnidadap()
     {
-        System.out.println("smn al ui");
-        Unidadap uap= new Unidadap();
-        uap.setNombreUnidadAprendizaje(unidadap.getNombreUnidadAprendizaje());
-        uap.setHorasClase(unidadap.getHorasClase());
-        uap.setHorasLaboratorio(unidadap.getHorasLaboratorio());
-        uap.setHorasTaller(unidadap.getHorasTaller());
-        System.out.println(uap.getNombreUnidadAprendizaje());
-        System.out.println(uap.getHorasClase());
-        System.out.println(uap.getHorasLaboratorio());
-        System.out.println(uap.getHorasTaller());
-        unidadapHelper.altaUnidadap(uap);
-        
+        unidadapHelper.altaUnidadap(unidadap);
     }
  
     

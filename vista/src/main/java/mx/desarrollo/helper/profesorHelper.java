@@ -5,10 +5,21 @@
  */
 package mx.desarrollo.helper;
 
+import java.io.IOException;
+import java.io.Serializable;
+import javax.faces.context.FacesContext;
+import mx.desarrollo.entidad.Profesor;
+import mx.desarrollo.integracion.ServiceFacadeLocator;
+
 /**
  *
- * @author ferna
+ * @author Kevin
  */
-public class profesorHelper {
+public class profesorHelper implements Serializable{
+   
+ 
+    public void altaProfesor(Profesor profe){
+        ServiceFacadeLocator.getInstanceFacadeProfesor().guardarProfesor(profe);
+    }
     
 }
