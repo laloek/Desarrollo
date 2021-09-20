@@ -24,10 +24,9 @@ public class UnidadapHelper implements Serializable{
      * @param password
      * @return 
      */
-    public Unidadap Login(String correo, String password){
-        return ServiceFacadeLocator.getInstanceFacadeUsuario().login(password, correo);
+    
+    public void altaUnidadap(Unidadap uap){
+        ServiceFacadeLocator.getInstanceFacadeUnidadap().guardarUnidadap(uap); 
     }
-    
-    
     
 }
