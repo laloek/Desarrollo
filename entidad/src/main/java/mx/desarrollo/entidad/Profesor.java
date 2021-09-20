@@ -6,10 +6,12 @@
 package mx.desarrollo.entidad;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -37,6 +39,7 @@ public class Profesor implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "idProfesor")
     private Integer idProfesor;
@@ -50,7 +53,7 @@ public class Profesor implements Serializable {
         @JoinColumn(name = "Profesor_idProfesor", referencedColumnName = "idProfesor")}, inverseJoinColumns = {
         @JoinColumn(name = "UnidadAP_idUnidadAprendizaje", referencedColumnName = "idUnidadAprendizaje")})
     @ManyToMany
-    private Collection<Unidadap> unidadapCollection;
+    private List<Unidadap> unidadapList;
 
     public Profesor() {
     }
@@ -92,12 +95,12 @@ public class Profesor implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Unidadap> getUnidadapCollection() {
-        return unidadapCollection;
+    public List<Unidadap> getUnidadapList() {
+        return unidadapList;
     }
 
-    public void setUnidadapCollection(Collection<Unidadap> unidadapCollection) {
-        this.unidadapCollection = unidadapCollection;
+    public void setUnidadapList(List<Unidadap> unidadapList) {
+        this.unidadapList = unidadapList;
     }
 
     @Override

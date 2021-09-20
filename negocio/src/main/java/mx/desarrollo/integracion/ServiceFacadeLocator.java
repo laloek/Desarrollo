@@ -27,6 +27,7 @@ public class ServiceFacadeLocator {
     }
     
     public static FacadeUnidadap getInstanceFacadeUnidadap() {
+        System.out.println("FACADE");
         if (facadeUnidadap == null) {
             facadeUnidadap = new FacadeUnidadap();
             return facadeUnidadap;

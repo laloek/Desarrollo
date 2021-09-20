@@ -26,8 +26,8 @@ public class UnidadapHelper implements Serializable{
      */
     
     public void altaUnidadap(Unidadap uap){
-        System.out.print("smn al helper");
-        ServiceFacadeLocator.getInstanceFacadeUnidadap().guardarUnidadap(uap); 
+        System.out.println("smn al helper");
+        ServiceFacadeLocator.getInstanceFacadeUnidadap().guardarUnidadap(uap);
     }
     
 }
