@@ -10,7 +10,12 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <style>
-            
+            body{
+                background-color: black;
+                background: url("resources/thumb2-4k-green-abstract-waves-creative-abstract-art-green-wavy-background.jpg"); 
+                background-size: cover;
+                background-repeat: no-repeat;
+                }
             *{
                 text-align: center;
             }
@@ -27,8 +32,8 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                height: 35%;
-                width: 25%;
+                height: 46%;
+                width: 30%;
                 padding: 25px;
                 margin: auto;
                 background: white;
@@ -44,10 +49,22 @@
             .btn-success{
                 text-shadow: none;
             }
+            
+            c{
+                font-family:   Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+                font-size: 50px;
+            }
+            
+            a{
+                font-size: 25px;
+                color: black;
+                }
         </style>
     </h:head>
 
     <h:body>
+        <section style="background-color: darkgreen; text-align: center; opacity: 0.9">
+           <c>Alta de unidad de aprendizaje</c></section>
         <div class = "row">
            
             <h:form>
@@ -56,20 +73,22 @@
                      
                 </p:messages>
                 <div class="login">
+                    
                     <div class="panel-body">
-                        
-                        <p:inputText class ="form-control" placeholder ="Nombre:" autocomplete="false" value ="#{altaunidadapUI.unidadap.nombreUnidadAprendizaje}" />
-                        
+                        Ingrese la informacion pedida sobre la unidad de aprendizaje<br></br><br></br>
                         <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de clase: " value="#{altaunidadapUI.unidadap.horasClase}" />
+                        <p:inputText class ="form-control" placeholder ="Nombre" autocomplete="false" value ="#{altaunidadapUI.unidadap.nombreUnidadAprendizaje}" />
                         </div>
                         <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de taller: " value="#{altaunidadapUI.unidadap.horasTaller}" />
+                            <p:inputText class ="form-control" placeholder="Horas de clase" value="#{altaunidadapUI.unidadap.horasClase}" />
                         </div>
                         <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de clase: " value="#{altaunidadapUI.unidadap.horasLaboratorio}" />
+                            <p:inputText class ="form-control" placeholder="Horas de taller" value="#{altaunidadapUI.unidadap.horasTaller}" />
                         </div>
-                        <p:commandButton class = "btn btn-success" value ="Iniciar sesion" actionListener ="#{altaunidadapUI.nuevaUnidadap}" />
+                        <div class="form-group">
+                            <p:inputText class ="form-control" placeholder="Horas de clase" value="#{altaunidadapUI.unidadap.horasLaboratorio}" />
+                        </div>
+                        <p:commandButton class = "btn btn-success" value ="Dar de alta" actionListener ="#{altaunidadapUI.nuevaUnidadap}" />
 
                     </div>
                 </div>
