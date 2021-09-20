@@ -66,26 +66,11 @@
                 <p:messages id="messages" showDetail="true" closable="true">
                      
                 </p:messages>
-                
-                <p:panelGrid class="txt">
-            <p:row>
-                <p:column styleClass="celda">Registros:</p:column>
-                <p:column><h:outputText value="#{consultasUI.listaprofesor}" /></p:column>
-            </p:row>
-        </p:panelGrid>
-                 <TABLE align="center" border="2">
-	<tr>
-		<td>
-			Nombre
-		</td>
-		<td>
-			Apellido
-		</td>
-                <td>
-			RFC
-		</td>
-        </tr>
-	</TABLE>
+                <p:dataTable value="#{consultasUI.listaProfesor}" var="profesor">
+                    <p:column headerText="ID"><h:outputText value="#{profesor.idProfesor}"/> </p:column>
+                    <p:column headerText="Nombre"><h:outputText value="#{profesor.nombre}"/> </p:column>
+                </p:dataTable>
+        
             </h:form>
             
         </div>

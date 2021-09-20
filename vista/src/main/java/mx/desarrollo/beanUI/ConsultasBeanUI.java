@@ -39,7 +39,7 @@ public class ConsultasBeanUI implements Serializable{
         profe= new Profesor();
     }
 
-    public List<Profesor> listaprofesor()
+    public List<Profesor> getListaProfesor()
     {
         List<Profesor> lista = profesorHelper.todosprofesores();
         return lista;

@@ -4,3 +4,4 @@ mx\desarrollo\helper\profesorHelper.class
 mx\desarrollo\helper\UnidadapHelper.class
 mx\desarrollo\helper\LoginHelper.class
 mx\desarrollo\beanUI\altaunidadapBeanUI.class
+mx\desarrollo\beanUI\ConsultasBeanUI.class
