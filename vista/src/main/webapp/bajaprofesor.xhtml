@@ -32,8 +32,8 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                height: 35%;
-                width: 25%;
+                height: 46%;
+                width: 30%;
                 padding: 25px;
                 margin: auto;
                 background: white;
@@ -49,40 +49,47 @@
             .btn-success{
                 text-shadow: none;
             }
-             c{
+            
+            c{
                 font-family:   Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
                 font-size: 50px;
             }
+            
+            a{
+                font-size: 25px;
+                color: black;
+                }
         </style>
     </h:head>
 
     <h:body>
         <section style="background-color: darkgreen; text-align: center; opacity: 0.9">
-           <c>Eliminacion de profesores</c></section>
-        
-        
-          <c>Ingrese el ID del profesor a eliminar</c><br></br><br></br>
-                            <p:inputText class ="form-control" placeholder="ID" value="#{bajaprofesorUI.profesor.idProfesor}" />
-                            
-                        <p:commandButton class = "btn btn-success" value ="Eliminar" actionListener ="#{bajaprofesorUI.bajaProfesor}" />
-                        
-                        
-                        
+           <c>Alta de unidad de aprendizaje</c></section>
         <div class = "row">
            
-            <form>
+            <h:form>
                
                 <p:messages id="messages" showDetail="true" closable="true">
                      
                 </p:messages>
+                <div>
+                    
+                    <div class="panel-body">
+                        Ingrese el id del profesor que quieres eliminar<br></br><br></br>
+                        <div class="form-group">
+                        <p:inputText class ="form-control" placeholder ="Id" autocomplete="false" value ="#{idprofesor}" />
+                        </div>
+                        <p:commandButton class = "btn btn-success" value ="Eliminar" actionListener ="#{bajaprofesorUI.bajaProfesor(idprofesor)}" />
+
+                    </div>
+                </div>
                 <p:dataTable value="#{consultasUI.listaProfesor}" var="profesor">
                     <p:column headerText="ID"><h:outputText value="#{profesor.idProfesor}"/> </p:column>
                     <p:column headerText="Nombre"><h:outputText value="#{profesor.nombre}"/> </p:column>
                     <p:column headerText="Apellido"><h:outputText value="#{profesor.apellido}"/> </p:column>
                     <p:column headerText="RFC"><h:outputText value="#{profesor.rfc}"/> </p:column>
                 </p:dataTable>
-        
-            </form>
+            </h:form>
             
         </div>
             

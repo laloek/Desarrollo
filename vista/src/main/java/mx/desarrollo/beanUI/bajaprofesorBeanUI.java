@@ -38,9 +38,9 @@ public class bajaprofesorBeanUI implements Serializable{
         profe= new Profesor();
     }
 
-    public void bajaProfesor()
+    public void bajaProfesor(int idprofesor)
     {
-        profesorHelper.bajaProfesor(profe);
+        profesorHelper.bajaProfesor(profesorHelper.buscarProfesor(idprofesor));
     }
  
 

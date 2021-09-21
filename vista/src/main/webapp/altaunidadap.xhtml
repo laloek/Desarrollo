@@ -77,18 +77,9 @@
                     <div class="panel-body">
                         Ingrese la informacion pedida sobre la unidad de aprendizaje<br></br><br></br>
                         <div class="form-group">
-                        <p:inputText class ="form-control" placeholder ="Nombre" autocomplete="false" value ="#{altaunidadapUI.unidadap.nombreUnidadAprendizaje}" />
+                        <p:inputText class ="form-control" placeholder ="Nombre" autocomplete="false" value ="#{idprofesor}" />
                         </div>
-                        <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de clase" value="#{altaunidadapUI.unidadap.horasClase}" />
-                        </div>
-                        <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de taller" value="#{altaunidadapUI.unidadap.horasTaller}" />
-                        </div>
-                        <div class="form-group">
-                            <p:inputText class ="form-control" placeholder="Horas de clase" value="#{altaunidadapUI.unidadap.horasLaboratorio}" />
-                        </div>
-                        <p:commandButton class = "btn btn-success" value ="Dar de alta" actionListener ="#{altaunidadapUI.nuevaUnidadap}" />
+                        <p:commandButton class = "btn btn-success" value ="Dar de alta" actionListener ="#{bajaprofesorUI.bajaProfesor(idprofesor)}" />
 
                     </div>
                 </div>
