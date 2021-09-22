@@ -20,6 +20,7 @@ public class FacadeProfesor {
     
     public void guardarProfesor(Profesor profesor){
         delegateProfesor.saveProfesor(profesor);
+        
     }
     
     public void eliminarProfesor(Profesor profesor)

@@ -21,6 +21,7 @@ public class profesorHelper implements Serializable{
  
     public void altaProfesor(Profesor profe){
         ServiceFacadeLocator.getInstanceFacadeProfesor().guardarProfesor(profe);
+        
     }
     
     public List<Profesor> todosprofesores()
@@ -32,6 +33,7 @@ public class profesorHelper implements Serializable{
     {
        
         ServiceFacadeLocator.getInstanceFacadeProfesor().eliminarProfesor(profe);
+        
     }
     
     public Profesor buscarProfesor(int id)
