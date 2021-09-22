@@ -32,6 +32,7 @@ public class ConsultasBeanUI implements Serializable{
     
     public ConsultasBeanUI() {
         profesorHelper = new profesorHelper();
+        unidadapHelper = new UnidadapHelper();
     }
     
     /**
@@ -63,6 +64,13 @@ public class ConsultasBeanUI implements Serializable{
 
     public void setProfesor(Profesor profe) {
         this.profe = profe;
+    }
+    public Unidadap getUnidadap() {
+        return unidad;
+    }
+
+    public void setUnidadap(Unidadap unidad) {
+        this.unidad = unidad;
     }
     
     
