@@ -49,7 +49,9 @@ public class altaprofesorBeanUI implements Serializable{
         profe.setUnidadapList(unidadapList);
         profesorHelper.altaProfesor(profe);
     }
- 
+ public void listaunidades(int unidad){
+       System.out.println(unidad);
+    }
     
     /* getters y setters*/
 
