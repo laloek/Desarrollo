@@ -7,12 +7,14 @@ package mx.desarrollo.beanUI;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import mx.desarrollo.entidad.Profesor;
+import mx.desarrollo.entidad.Unidadap;
 import mx.desarrollo.helper.profesorHelper;
 
 /**
@@ -23,6 +25,7 @@ import mx.desarrollo.helper.profesorHelper;
 @SessionScoped
 public class altaprofesorBeanUI implements Serializable{
     private Profesor profe;
+    private List<Unidadap> unidadapList;
     private profesorHelper profesorHelper;
     
     public altaprofesorBeanUI() {
@@ -43,6 +46,7 @@ public class altaprofesorBeanUI implements Serializable{
         System.out.print(profe.getNombre());
         System.out.print(profe.getApellido());
         System.out.print(profe.getRfc());
+        profe.setUnidadapList(unidadapList);
         profesorHelper.altaProfesor(profe);
     }
  
