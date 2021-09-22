@@ -36,17 +36,16 @@
                         <div class="form-group">
                             <p:inputText class ="form-control" placeholder="RFC" value="#{altaprofesorUI.profesor.rfc}" />
                         </div>
-                        <div class="form-group">
-                            <select class ="form-control">
+                        <div class="data">
                                 <p:dataList var="unidad" value="#{consultasUI.listaUnidadap}">
-                                    <option value="#{unidad.idUnidadAprendizaje}"><h:outputText value="#{unidad.nombreUnidadAprendizaje}"/></option>
+                                    <input type="checkbox" value="#{unidad}"><h:outputText value="#{unidad.nombreUnidadAprendizaje}"/></input>
                                 </p:dataList>
-                            </select>
+                        </div>
                         </div>
                         <p:commandButton class = "btn btn-success" value ="Dar de alta" actionListener ="#{altaprofesorUI.nuevoProfesor}" />
-                    </div>
                 </div>
             </h:form>
+            
         </div>
     </h:body>
 </html>
