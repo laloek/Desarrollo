@@ -55,6 +55,12 @@ public class ConsultasBeanUI implements Serializable{
         List<Unidadap> listaunidad = unidadapHelper.todasunidades();
         return listaunidad;
     }
+    
+    public void login(Profesor p) throws IOException{
+        String appURL = "/consultaprofesor.xhtml";
+        this.profe=p;
+        FacesContext.getCurrentInstance().getExternalContext().redirect(FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath() + appURL);
+    }
 
             /* getters y setters*/
 

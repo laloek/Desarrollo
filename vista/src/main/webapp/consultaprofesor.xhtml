@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      >
+
+    <h:head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;max-width:1000px;
+  display:table;margin:0px auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr{background:#fff;}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+    <h:body>
+        <section class="head">
+           <c>Consulta Especifica de profesores</c></section>
+        <div class = "row">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>RFC</th>
+                </tr>
+                <tr>
+                    <td><h:outputText value="#{consultasUI.profesor.idProfesor}"/></td>
+                    <td><h:outputText value="#{consultasUI.profesor.nombre}"/></td>
+                    <td><h:outputText value="#{consultasUI.profesor.apellido}"/></td>
+                    <td><h:outputText value="#{consultasUI.profesor.rfc}"/></td>
+                </tr>
+            </table>
+            
+            <p:dataTable class="consultaprofe" value="#{consultasUI.profesor.unidadapList}" var="unidad">
+                <p:column headerText="ID"><h:outputText value="#{unidad.idUnidadAprendizaje}"/> </p:column>
+                <p:column headerText="ID"><h:outputText value="#{unidad.nombreUnidadAprendizaje}"/> </p:column>
+                <p:column headerText="Nombre"><h:outputText value="#{unidad.horasClase}"/> </p:column>
+                <p:column headerText="Apellido"><h:outputText value="#{unidad.horasLaboratorio}"/> </p:column>
+                <p:column headerText="RFC"><h:outputText value="#{unidad.horasTaller}"/> </p:column>
+                </p:dataTable>
+                    
+        </div>
+            
+    </h:body>
+</html>
