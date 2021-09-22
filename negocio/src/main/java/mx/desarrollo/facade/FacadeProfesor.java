@@ -23,6 +23,11 @@ public class FacadeProfesor {
         
     }
     
+    public void modificarprofesor(Profesor profe)
+    {
+        delegateProfesor.updateprofesor(profe);
+    }
+    
     public void eliminarProfesor(Profesor profesor)
     {
         delegateProfesor.deleteProfesor(profesor);

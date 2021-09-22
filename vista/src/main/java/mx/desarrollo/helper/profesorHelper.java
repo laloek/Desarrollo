@@ -43,4 +43,9 @@ public class profesorHelper implements Serializable{
         return profe;
     }
     
+    public void modificacionprofe(Profesor profe)
+    {
+        ServiceFacadeLocator.getInstanceFacadeProfesor().modificarprofesor(profe);
+    }
+    
 }

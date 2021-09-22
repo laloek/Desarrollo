@@ -24,4 +24,9 @@ public class DelegateProfesor {
     {
        return ServiceLocator.getInstanceProfesorDAO().find(id);
     }
+    
+    public void updateprofesor(Profesor profe)
+    {
+        ServiceLocator.getInstanceProfesorDAO().update(profe);
+    }
 }
