@@ -28,7 +28,7 @@
                         <div class="form-group">
                             <p:inputText class ="form-control" placeholder ="Id" autocomplete="false" value ="#{idprofesor}"  />
                         </div>
-                        <p:commandButton class = "btn btn-success" value ="Buscar" actionListener ="#{modificacionprofesorUI.buscarprofesor(idprofesor)}" onclick="location.reload()"/>
+                        <p:commandButton class = "btn btn-success" value ="Buscar" actionListener ="#{modificacionprofesorUI.buscarprofesor(idprofesor)}" onclick="refreshPage()"/>
                         <br><br></br></br>
                         <div class="form-group">
                             <p:inputText class ="form-control" placeholder ="Nombre" autocomplete="false" value ="#{modificacionprofesorUI.profesor.nombre}" />
@@ -39,7 +39,7 @@
                         <div class="form-group">
                             <p:inputText class ="form-control" placeholder ="Rfc" autocomplete="false" value ="#{modificacionprofesorUI.profesor.rfc}" />
                         </div>
-                        <p:commandButton class = "btn btn-success" value ="Modificar" actionListener="#{modificacionprofesorUI.modificarprofe()}"/>
+                        <p:commandButton class = "btn btn-success" value ="Modificar" actionListener="#{modificacionprofesorUI.modificarprofe()}" onclick="refreshPage()"/>
                     </div>
                 </div>
                 <p:dataTable value="#{consultasUI.listaProfesor}" var="profesor">
