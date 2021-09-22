@@ -7,7 +7,9 @@ package mx.desarrollo.helper;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.List;
 import javax.faces.context.FacesContext;
+import mx.desarrollo.entidad.Profesor;
 import mx.desarrollo.entidad.Unidadap;
 import mx.desarrollo.integracion.ServiceFacadeLocator;
 
@@ -24,6 +26,11 @@ public class UnidadapHelper implements Serializable{
      * @param password
      * @return 
      */
+    
+    public List<Unidadap> todasunidades()
+    {
+        return ServiceFacadeLocator.getInstanceFacadeUnidadap().todasunidadap();
+    }
     
     public void altaUnidadap(Unidadap uap){
         ServiceFacadeLocator.getInstanceFacadeUnidadap().guardarUnidadap(uap);

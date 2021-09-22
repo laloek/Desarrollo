@@ -15,6 +15,8 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import mx.desarrollo.entidad.Profesor;
 import mx.desarrollo.helper.profesorHelper;
+import mx.desarrollo.entidad.Unidadap;
+import mx.desarrollo.helper.UnidadapHelper;
 
 /**
  *
@@ -23,8 +25,10 @@ import mx.desarrollo.helper.profesorHelper;
 @ManagedBean(name = "consultasUI")
 @SessionScoped
 public class ConsultasBeanUI implements Serializable{
+    private Unidadap unidad;
     private Profesor profe;
     private profesorHelper profesorHelper;
+    private UnidadapHelper unidadapHelper;
     
     public ConsultasBeanUI() {
         profesorHelper = new profesorHelper();
@@ -37,6 +41,7 @@ public class ConsultasBeanUI implements Serializable{
     @PostConstruct
     public void init(){
         profe= new Profesor();
+        unidad = new Unidadap();
     }
 
     public List<Profesor> getListaProfesor()
@@ -45,8 +50,12 @@ public class ConsultasBeanUI implements Serializable{
         return lista;
     }
  
-    
-    /* getters y setters*/
+    public List<Unidadap> getListaUnidadap(){
+        List<Unidadap> listaunidad = unidadapHelper.todasunidades();
+        return listaunidad;
+    }
+
+            /* getters y setters*/
 
     public Profesor getProfesor() {
         return profe;

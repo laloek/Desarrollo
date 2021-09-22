@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mx.desarrollo.delegate;
+import java.util.List;
 import mx.desarrollo.entidad.Unidadap;
 import mx.desarrollo.integracion.ServiceLocator;
 /**
@@ -16,4 +17,8 @@ public class DelegateUnidadap {
         ServiceLocator.getInstanceUnidadapDAO().save(unidadap);
     }
     
+     public List<Unidadap> allUnidades()
+    {
+        return ServiceLocator.getInstanceUnidadapDAO().findAll();
+    }
 }
