@@ -28,7 +28,7 @@
                         <div class="form-group">
                         <p:inputText class ="form-control" placeholder ="Id" autocomplete="false" value ="#{idprofesor}" />
                         </div>
-                        <p:commandButton class = "btn btn-success" value ="Eliminar" actionListener ="#{bajaprofesorUI.bajaProfesor(idprofesor)}" />
+                        <p:commandButton class = "btn btn-success" value ="Eliminar" actionListener ="#{bajaprofesorUI.bajaProfesor(idprofesor)}" onclick="refreshPage()" />
 
                     </div>
                 </div>
