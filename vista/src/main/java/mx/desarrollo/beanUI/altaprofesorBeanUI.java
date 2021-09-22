@@ -43,14 +43,11 @@ public class altaprofesorBeanUI implements Serializable{
 
     public void nuevoProfesor()
     {
-        System.out.print(profe.getNombre());
-        System.out.print(profe.getApellido());
-        System.out.print(profe.getRfc());
         profe.setUnidadapList(unidadapList);
         profesorHelper.altaProfesor(profe);
     }
- public void listaunidades(int unidad){
-       System.out.println(unidad);
+ public void print(Unidadap unidad){
+       unidadapList.add(unidad);
     }
     
     /* getters y setters*/

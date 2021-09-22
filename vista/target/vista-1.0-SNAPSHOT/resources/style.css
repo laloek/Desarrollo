@@ -19,15 +19,21 @@ body{
             .menu-inicio li{font-size:30px;width:500px;margin:0px auto;display:table;color:#000;}
             .menu-inicio a{}
             
-            .consultaprofe{width:100%;max-width:700px;margin:100px auto 0px;}
-            .consultaprofe td{font-size:25px;}
-            .consultaprofe th{font-size:30px;}
+            .consultaprofe{width:100%;max-width:1000px;margin:100px auto 0px;}
+            .consultaprofe td{font-size:20px;}
+            .consultaprofe th{font-size:25px;}
             
-            .borrar{width:100%;max-width:700px;margin:0px auto 70px;}
+            .borrar{width:100%;max-width:1000px;margin:0px auto 70px;}
             .borrar p{margin:50px 0px 20px;}
             .eliminarprofe{width:100%;max-width:800px;margin:100px auto 0px;}
             .eliminarprofe td{font-size:20px;}
             .eliminarprofe th{font-size:25px;}
+            
+            .data{}
+            .data .ui-widget-content{border:none;}
+            .data ul{list-style-type:none;margin:0px;padding:0px;}
+            .data ul li{text-align:left;margin-bottom:20px;}
+            .data ul li button{margin-right:50px;}
             
             div.login{
                 width: 100%;

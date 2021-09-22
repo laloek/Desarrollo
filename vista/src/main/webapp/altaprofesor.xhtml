@@ -38,7 +38,7 @@
                         </div>
                         <div class="data">
                                 <p:dataList var="unidad" value="#{consultasUI.listaUnidadap}">
-                                    <p:inputText value="#{altaprofesorUI.listaunidades(unidad.idUnidadAprendizaje)}" type="checkbox"><h:outputText value="#{unidad.nombreUnidadAprendizaje}"/></p:inputText>
+                                    <p:commandButton actionListener="#{altaprofesorUI.print(unidad)}" value="Añadir Unidad"></p:commandButton><h:outputText value="#{unidad.nombreUnidadAprendizaje}"/>
                                 </p:dataList>
                         </div>
                         </div>

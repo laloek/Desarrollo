@@ -12,7 +12,7 @@
     </h:head>
 
      <h:body>
-        <section style="background-color: darkgreen; text-align: center; opacity: 0.9">
+        <section class="head">
            <c>Alta de unidad de aprendizaje</c></section>
         <div class = "row">
            
@@ -23,13 +23,13 @@
                 </p:messages>
                 <div>
                     
-                    <div class="panel-body">
-                        Ingrese los valores del profesor que quiere modificar e ingrese el id del profesor correspondiente<br></br><br></br>
+                    <div class="borrar">
+                        <p>Ingrese el id del profesor correspondiente</p>
                         <div class="form-group">
                             <p:inputText class ="form-control" placeholder ="Id" autocomplete="false" value ="#{idprofesor}"  />
                         </div>
                         <p:commandButton class = "btn btn-success" value ="Buscar" actionListener ="#{modificacionprofesorUI.buscarprofesor(idprofesor)}" onclick="refreshPage()"/>
-                        <br><br></br></br>
+                        <p>Ingrese los valores del profesor que quiere modificar</p>
                         <div class="form-group">
                             <p:inputText class ="form-control" placeholder ="Nombre" autocomplete="false" value ="#{modificacionprofesorUI.profesor.nombre}" />
                         </div>
@@ -42,7 +42,7 @@
                         <p:commandButton class = "btn btn-success" value ="Modificar" actionListener="#{modificacionprofesorUI.modificarprofe()}" onclick="refreshPage()"/>
                     </div>
                 </div>
-                <p:dataTable value="#{consultasUI.listaProfesor}" var="profesor">
+                <p:dataTable class="eliminarprofe" value="#{consultasUI.listaProfesor}" var="profesor">
                     <p:column headerText="ID"><h:outputText value="#{profesor.idProfesor}"/> </p:column>
                     <p:column headerText="Nombre"><h:outputText value="#{profesor.nombre}"/> </p:column>
                     <p:column headerText="Apellido"><h:outputText value="#{profesor.apellido}"/> </p:column>
