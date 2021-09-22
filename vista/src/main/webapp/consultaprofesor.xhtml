@@ -50,10 +50,10 @@ tr:nth-child(even) {
             
             <p:dataTable class="consultaprofe" value="#{consultasUI.profesor.unidadapList}" var="unidad">
                 <p:column headerText="ID"><h:outputText value="#{unidad.idUnidadAprendizaje}"/> </p:column>
-                <p:column headerText="ID"><h:outputText value="#{unidad.nombreUnidadAprendizaje}"/> </p:column>
-                <p:column headerText="Nombre"><h:outputText value="#{unidad.horasClase}"/> </p:column>
-                <p:column headerText="Apellido"><h:outputText value="#{unidad.horasLaboratorio}"/> </p:column>
-                <p:column headerText="RFC"><h:outputText value="#{unidad.horasTaller}"/> </p:column>
+                <p:column headerText="Nombre"><h:outputText value="#{unidad.nombreUnidadAprendizaje}"/> </p:column>
+                <p:column headerText="Horas clase"><h:outputText value="#{unidad.horasClase}"/> </p:column>
+                <p:column headerText="Horas laboratorio"><h:outputText value="#{unidad.horasLaboratorio}"/> </p:column>
+                <p:column headerText="Horas taller"><h:outputText value="#{unidad.horasTaller}"/> </p:column>
                 </p:dataTable>
                     
         </div>
