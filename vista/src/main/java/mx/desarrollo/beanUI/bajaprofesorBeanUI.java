@@ -54,16 +54,4 @@ public class bajaprofesorBeanUI implements Serializable{
     public void setProfesor(Profesor profe) {
         this.profe = profe;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-
-    
 }
