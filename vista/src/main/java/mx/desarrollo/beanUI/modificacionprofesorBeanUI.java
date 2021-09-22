@@ -38,12 +38,13 @@ public class modificacionprofesorBeanUI implements Serializable{
         profe= new Profesor();
     }
 
-    public void modificarProfesor(int idprofesor)
-    {
-        profesorHelper.bajaProfesor(profesorHelper.buscarProfesor(idprofesor));
-    }
  
-
+ 
+    public Profesor buscarprofesor(int id)
+    {
+        profe = profesorHelper.buscarProfesor(id);
+        return profe;
+    }
     
     /* getters y setters*/
 

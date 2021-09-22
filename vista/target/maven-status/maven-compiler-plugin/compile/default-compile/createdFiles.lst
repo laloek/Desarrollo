@@ -3,6 +3,7 @@ mx\desarrollo\beanUI\LoginBeanUI.class
 mx\desarrollo\helper\profesorHelper.class
 mx\desarrollo\helper\UnidadapHelper.class
 mx\desarrollo\helper\LoginHelper.class
+mx\desarrollo\beanUI\modificacionprofesorBeanUI.class
 mx\desarrollo\beanUI\altaunidadapBeanUI.class
 mx\desarrollo\beanUI\ConsultasBeanUI.class
 mx\desarrollo\beanUI\bajaprofesorBeanUI.class

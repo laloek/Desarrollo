@@ -26,18 +26,20 @@
                     <div class="panel-body">
                         Ingrese los valores del profesor que quiere modificar e ingrese el id del profesor correspondiente<br></br><br></br>
                         <div class="form-group">
-                        <p:inputText class ="form-control" placeholder ="Id" autocomplete="false" value ="#{idprofesor}" />
+                            <p:inputText class ="form-control" placeholder ="Id" autocomplete="false" value ="#{idprofesor}"  />
+                        </div>
+                        <p:commandButton class = "btn btn-success" value ="Eliminar" actionListener ="#{modificacionprofesorUI.buscarProfesor(idprofesor)}" onclick="location.reload()"/>
+                        <br><br></br></br>
+                        <div class="form-group">
+                            <p:inputText class ="form-control" placeholder ="Nombre" autocomplete="false" value ="#{modificacionprofesorUI.profesor.nombre}" />
                         </div>
                         <div class="form-group">
-                            <p:inputText class ="form-control" placeholder ="Nombre" autocomplete="false" value ="#{bajaprofesorUI.profesor.nombre}" />
+                            <p:inputText class ="form-control" placeholder ="Apellido" autocomplete="false" value ="#{modificacionprofesorUI.profesor.apellido}" />
                         </div>
                         <div class="form-group">
-                            <p:inputText class ="form-control" placeholder ="Apellido" autocomplete="false" value ="#{bajaprofesorUI.profesor.apellido}" />
+                            <p:inputText class ="form-control" placeholder ="Rfc" autocomplete="false" value ="#{modificacionprofesorUI.profesor.rfc}" />
                         </div>
-                        <div class="form-group">
-                            <p:inputText class ="form-control" placeholder ="Rfc" autocomplete="false" value ="#{bajaprofesorUI.profesor.rfc}" />
-                        </div>
-                        <p:commandButton class = "btn btn-success" value ="Eliminar" actionListener ="#{bajaprofesorUI.bajaProfesor(idprofesor)}" />
+                        <p:commandButton class = "btn btn-success" value ="Eliminar" />
 
                     </div>
                 </div>
