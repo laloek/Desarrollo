@@ -8,62 +8,11 @@
 
     <h:head>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="style.css" rel="stylesheet" type="text/css"/>
-        <style>
-            body{
-                background-color: black;
-                background: url("resources/thumb2-4k-green-abstract-waves-creative-abstract-art-green-wavy-background.jpg"); 
-                background-size: cover;
-                background-repeat: no-repeat;
-                }
-            *{
-                text-align: center;
-            }
-            .center{
-                float: none;
-                margin: 0 auto;
-                
-            }
-            
-           
-            div.login{
-                position: absolute;
-                top:0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 46%;
-                width: 30%;
-                padding: 25px;
-                margin: auto;
-                background: white;
-                border-radius: 5px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-            .logo{
-                width: 150px;
-            }
-            .form-control:focus{
-                border-color:#007738;
-            }
-            .btn-success{
-                text-shadow: none;
-            }
-            
-            c{
-                font-family:   Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-                font-size: 50px;
-            }
-            
-            a{
-                font-size: 25px;
-                color: black;
-                }
-        </style>
+        <link href="resources/style.css" rel="stylesheet" type="text/css"/>
     </h:head>
 
     <h:body>
-        <section style="background-color: darkgreen; text-align: center; opacity: 0.9">
+        <section class="head">
            <c>Alta de unidad de aprendizaje</c></section>
         <div class = "row">
            
@@ -74,8 +23,8 @@
                 </p:messages>
                 <div>
                     
-                    <div class="panel-body">
-                        Ingrese el id del profesor que quieres eliminar<br></br><br></br>
+                    <div class="borrar">
+                        <p>Ingrese el id del profesor que quieres eliminar</p>
                         <div class="form-group">
                         <p:inputText class ="form-control" placeholder ="Id" autocomplete="false" value ="#{idprofesor}" />
                         </div>
@@ -83,7 +32,7 @@
 
                     </div>
                 </div>
-                <p:dataTable value="#{consultasUI.listaProfesor}" var="profesor">
+                <p:dataTable class="eliminarprofe" value="#{consultasUI.listaProfesor}" var="profesor">
                     <p:column headerText="ID"><h:outputText value="#{profesor.idProfesor}"/> </p:column>
                     <p:column headerText="Nombre"><h:outputText value="#{profesor.nombre}"/> </p:column>
                     <p:column headerText="Apellido"><h:outputText value="#{profesor.apellido}"/> </p:column>
