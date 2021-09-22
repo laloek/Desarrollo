@@ -21,31 +21,35 @@ import mx.desarrollo.helper.UnidadapHelper;
  */
 @ManagedBean(name = "altaunidadapUI")
 @SessionScoped
-public class altaunidadapBeanUI implements Serializable{
+public class altaunidadapBeanUI implements Serializable {
+
     private Unidadap unidadap;
     private UnidadapHelper unidadapHelper;
-    
+
     public altaunidadapBeanUI() {
         unidadapHelper = new UnidadapHelper();
     }
-    
+
     /**
-     * Metodo postconstructor todo lo que este dentro de este metodo
-     * sera la primero que haga cuando cargue la pagina
+     * Metodo postconstructor todo lo que este dentro de este metodo sera la
+     * primero que haga cuando cargue la pagina
      */
     @PostConstruct
-    public void init(){
-        unidadap= new Unidadap();
+    public void init() {
+        unidadap = new Unidadap();
     }
 
-    public void nuevaUnidadap()
-    {
+    public void nuevaUnidadap() throws IOException {
         unidadapHelper.altaUnidadap(unidadap);
+        cambioPagina();
     }
- 
-    
-    /* getters y setters*/
 
+    public void cambioPagina() throws IOException {
+        String appURL = "/Inicio.xhtml";
+        FacesContext.getCurrentInstance().getExternalContext().redirect(FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath() + appURL);
+    }
+
+    /* getters y setters*/
     public Unidadap getUnidadap() {
         return unidadap;
     }
@@ -53,16 +57,5 @@ public class altaunidadapBeanUI implements Serializable{
     public void setUnidadap(Unidadap unidadap) {
         this.unidadap = unidadap;
     }
-    
-    
-    
-    
-    
-    
-    
-    
 
-    
-
-    
 }

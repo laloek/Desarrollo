@@ -21,40 +21,42 @@ import mx.desarrollo.helper.profesorHelper;
  */
 @ManagedBean(name = "modificacionprofesorUI")
 @SessionScoped
-public class modificacionprofesorBeanUI implements Serializable{
+public class modificacionprofesorBeanUI implements Serializable {
+
     private Profesor profe;
     private profesorHelper profesorHelper;
-    
+
     public modificacionprofesorBeanUI() {
         profesorHelper = new profesorHelper();
     }
-    
+
     /**
-     * Metodo postconstructor todo lo que este dentro de este metodo
-     * sera la primero que haga cuando cargue la pagina
+     * Metodo postconstructor todo lo que este dentro de este metodo sera la
+     * primero que haga cuando cargue la pagina
      */
     @PostConstruct
-    public void init(){
-        profe= new Profesor();
+    public void init() {
+        profe = new Profesor();
     }
 
-    
-    public void modificarprofe()
-    {
+    public void modificarprofe() throws IOException {
         System.out.println(profe.getApellido());
         System.out.println(profe.getIdProfesor());
         profesorHelper.modificacionprofe(profe);
+        cambioPagina();
     }
- 
- 
-    public Profesor buscarprofesor(int id)
-    {
+
+    public void cambioPagina() throws IOException {
+        String appURL = "/consultas.xhtml";
+        FacesContext.getCurrentInstance().getExternalContext().redirect(FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath() + appURL);
+    }
+
+    public Profesor buscarprofesor(int id) {
         profe = profesorHelper.buscarProfesor(id);
         return profe;
     }
-    
-    /* getters y setters*/
 
+    /* getters y setters*/
     public Profesor getProfesor() {
         return profe;
     }

@@ -22,7 +22,7 @@
                      
                 </p:messages>
                 <p:dataTable class="consultaprofe" value="#{consultasUI.listaProfesor}" var="profesor">
-                    <p:column headerText="ID"><p:commandButton actionListener="#{consultasUI.login(profesor)}" value="Consulta profesor"/><h:outputText value="#{profesor.idProfesor}"/> </p:column>
+                    <p:column headerText="ID"><p:commandButton actionListener="#{consultasUI.login(profesor)}" value="Consultar"/><h:outputText value="#{profesor.idProfesor}"/> </p:column>
                     <p:column headerText="Nombre"><h:outputText value="#{profesor.nombre}"/> </p:column>
                     <p:column headerText="Apellido"><h:outputText value="#{profesor.apellido}"/> </p:column>
                     <p:column headerText="RFC"><h:outputText value="#{profesor.rfc}"/> </p:column>

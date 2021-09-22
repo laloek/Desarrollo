@@ -8,6 +8,7 @@ package mx.desarrollo.entidad;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -51,7 +52,7 @@ public class Unidadap implements Serializable {
     private Float horasTaller;
     @Column(name = "HorasLaboratorio")
     private Float horasLaboratorio;
-    @ManyToMany(mappedBy = "unidadapList")
+    @ManyToMany(mappedBy = "unidadapList",cascade = CascadeType.ALL)
     private List<Profesor> profesorList;
 
     public Unidadap() {
