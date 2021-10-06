@@ -60,14 +60,21 @@ public abstract class AbstractDAO<PK extends Serializable, T> implements Interfa
     public void save(T obj) {
         System.out.println("Save ----------");
         try {
+            System.out.println("INTENTO");
             HibernateUtil.getSession();
+            System.out.println("SESSION");
             HibernateUtil.beingTransaccion();
+            System.out.println("TRANSACCION");
+            System.out.println(obj);
             HibernateUtil.getSession().save(obj);
+            System.out.println("TERMINO");
 
         } catch (HibernateException e) {
+            System.out.println(e);
             HibernateUtil.rollbackTransaction();
         } finally {
             HibernateUtil.closeSession();
+            System.out.println("FINALISO");
         }
     }
 

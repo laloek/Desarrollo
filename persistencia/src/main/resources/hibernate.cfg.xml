@@ -10,7 +10,7 @@
 <property name="hibernate.enable_lazy_load_no_trans">true</property>
 <property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
 <property name="hibernate.connection.url">
-jdbc:mysql://localhost:3306/desarrollo?zeroDateTimeBehavior=convertToNull
+jdbc:mysql://localhost:3306/examen_avanti?zeroDateTimeBehavior=convertToNull
 </property>
 <property name="hibernate.connection.username">root</property>
 <property name="hibernate.connection.password">root</property>
@@ -26,7 +26,7 @@ jdbc:mysql://localhost:3306/desarrollo?zeroDateTimeBehavior=convertToNull
 <property name="c3p0.timeout">100</property>
 <!-- Nota: Aqui deben ir todas las entidades que se formaron de su base de datos
 en este caso se crearon las siguiente -->
-<mapping class="mx.desarrollo.entidad.Alumno"/>
-<mapping class="mx.desarrollo.entidad.Usuario"/>
+<mapping class="mx.desarrollo.entidad.Profesor"/>
+<mapping class="mx.desarrollo.entidad.Unidadap"/>
 </session-factory>
 </hibernate-configuration>

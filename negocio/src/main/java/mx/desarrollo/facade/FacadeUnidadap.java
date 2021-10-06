@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mx.desarrollo.facade;
+import java.util.List;
 import mx.desarrollo.delegate.DelegateUnidadap;
 import mx.desarrollo.entidad.Unidadap;
 /**
@@ -11,13 +12,18 @@ import mx.desarrollo.entidad.Unidadap;
  * @author lalo_
  */
 public class FacadeUnidadap {
-    private final DelegateUnidadap delegateProfesor;
+    private final DelegateUnidadap delegateUnidadap;
 
     public FacadeUnidadap() {
-        this.delegateProfesor = new DelegateUnidadap();
+        this.delegateUnidadap = new DelegateUnidadap();
     }
     
-    public void guardarAlumno(Unidadap unidadap){
-        delegateProfesor.saveUnidadap(unidadap);
+    public void guardarUnidadap(Unidadap unidadap){
+        delegateUnidadap.saveUnidadap(unidadap);
+    }
+    
+     public List<Unidadap> todasunidadap()
+    {
+        return delegateUnidadap.allUnidades();
     }
 }

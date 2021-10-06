@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package mx.desarrollo.facade;
+import java.util.List;
 import mx.desarrollo.delegate.DelegateProfesor;
 import mx.desarrollo.entidad.Profesor;
 /**
@@ -17,7 +18,31 @@ public class FacadeProfesor {
         this.delegateProfesor = new DelegateProfesor();
     }
     
-    public void guardarAlumno(Profesor profesor){
+    public void guardarProfesor(Profesor profesor){
         delegateProfesor.saveProfesor(profesor);
+        
     }
+    
+    public void modificarprofesor(Profesor profe)
+    {
+        delegateProfesor.updateprofesor(profe);
+    }
+    
+    public void eliminarProfesor(Profesor profesor)
+    {
+        delegateProfesor.deleteProfesor(profesor);
+    }
+    
+    public List<Profesor> todosprofesores()
+    {
+        return delegateProfesor.allProfesor();
+    }
+    
+    public Profesor busquedaProfesor(int id)
+    {
+        
+        return delegateProfesor.searchProfesor(id);
+    }
+    
+    
 }

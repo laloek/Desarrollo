@@ -1,10 +1,59 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-
-.body{
-    background: black;
-}
-
+body{
+                font-family:   Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+                background:url("bg.jpg"); 
+                background-repeat:repeat;
+                color:#000;
+                }
+                p{font-size:22px;}
+                .head{background-color:green; text-align: center; opacity: 0.9}
+                .row{margin:0;}
+            *{
+                text-align: center;
+            }
+            .center{
+                float: none;
+                margin: 0 auto;
+                
+            }
+            .menu-inicio{margin-top:100px;}
+            .menu-inicio li{font-size:30px;width:500px;margin:0px auto;display:table;color:#000;}
+            .menu-inicio a{}
+            
+            .consultaprofe{width:100%;max-width:1000px;margin:100px auto 0px;}
+            .consultaprofe td{font-size:20px;}
+            .consultaprofe th{font-size:25px;}
+            
+            .borrar{width:100%;max-width:1000px;margin:0px auto 70px;}
+            .borrar p{margin:50px 0px 20px;}
+            .eliminarprofe{width:100%;max-width:800px;margin:100px auto 0px;}
+            .eliminarprofe td{font-size:20px;}
+            .eliminarprofe th{font-size:25px;}
+            
+            .data{}
+            .data .ui-widget-content{border:none;}
+            .data ul{list-style-type:none;margin:0px;padding:0px;}
+            .data ul li{text-align:left;margin-bottom:20px;}
+            .data ul li button{margin-right:50px;}
+            
+            div.login{
+                width: 100%;
+                max-width:400px;
+                padding: 25px;
+                margin:100px auto 0px;
+                background: white;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .logo{
+                width: 150px;
+            }
+            .form-control:focus{
+                border-color:#007738;
+            }
+            .btn-success{
+                text-shadow: none;
+            }
+             c{
+                font-family:   Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+                font-size: 50px;
+            }

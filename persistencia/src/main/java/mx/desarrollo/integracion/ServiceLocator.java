@@ -18,7 +18,7 @@ public class ServiceLocator {
     private static ProfesorDAO profesorDAO;
     private static UnidadapDAO unidadapDAO;
     
-    public static ProfesorDAO getInstanceAlumnoDAO(){
+    public static ProfesorDAO getInstanceProfesorDAO(){
         if(profesorDAO == null){
             profesorDAO = new ProfesorDAO();
             return profesorDAO;
@@ -27,7 +27,7 @@ public class ServiceLocator {
         }
     }
     
-    public static UnidadapDAO getInstanceUsuarioDAO(){
+    public static UnidadapDAO getInstanceUnidadapDAO(){
         if(unidadapDAO == null){
             unidadapDAO = new UnidadapDAO();
             return unidadapDAO;

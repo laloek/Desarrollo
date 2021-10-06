@@ -6,10 +6,13 @@
 package mx.desarrollo.entidad;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
@@ -36,6 +39,7 @@ public class Unidadap implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "idUnidadAprendizaje")
     private Integer idUnidadAprendizaje;
@@ -48,8 +52,8 @@ public class Unidadap implements Serializable {
     private Float horasTaller;
     @Column(name = "HorasLaboratorio")
     private Float horasLaboratorio;
-    @ManyToMany(mappedBy = "unidadapCollection")
-    private Collection<Profesor> profesorCollection;
+    @ManyToMany(mappedBy = "unidadapList",cascade = CascadeType.ALL)
+    private List<Profesor> profesorList;
 
     public Unidadap() {
     }
@@ -99,12 +103,12 @@ public class Unidadap implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Profesor> getProfesorCollection() {
-        return profesorCollection;
+    public List<Profesor> getProfesorList() {
+        return profesorList;
     }
 
-    public void setProfesorCollection(Collection<Profesor> profesorCollection) {
-        this.profesorCollection = profesorCollection;
+    public void setProfesorList(List<Profesor> profesorList) {
+        this.profesorList = profesorList;
     }
 
     @Override
